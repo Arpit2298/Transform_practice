@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 3D Example</title>
+
+    <style>
+        div {
+            display: inline-block;
+        }
+        
+        #box1 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            margin: 100px 0 0 100px;
+        }
+        
+        #subbox1 {
+            width: 250px;
+            height: 250px;
+            background-color: darkslateblue;
+            transition: 2s;
+        }
+        
+        h2 {
+            text-align: center;
+            position: relative;
+            top: 40%;
+        }
+        
+        #subbox1:hover {
+            transform-origin: center;
+            transform: perspective(1000px) rotateX(60deg);
+        }
+        
+        #box2 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            margin: 100px 0 0 100px;
+        }
+        
+        #subbox2 {
+            width: 250px;
+            height: 250px;
+            background-color: darkslateblue;
+            transition: 2s;
+        }
+        
+        #subbox2:hover {
+            transform-origin: center;
+            transform: perspective(1000px) rotateY(140deg);
+        }
+        
+        #box3 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            margin: 100px 0 0 100px;
+        }
+        
+        #subbox3 {
+            width: 250px;
+            height: 250px;
+            background-color: darkslateblue;
+            transition: 2s;
+        }
+        
+        #subbox3:hover {
+            transform: perspective(1000px) rotateZ(-60deg);
+        }
+        
+        #box4 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            margin: 100px 0 0 100px;
+        }
+        
+        #subbox4 {
+            width: 250px;
+            height: 250px;
+            background-color: darkslateblue;
+        }
+        
+        #subbox4:hover {
+            transform: rotateX(60deg) translateZ(100px);
+            transition: .8s;
+        }
+        
+        #box5 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            margin: 100px 0 0 100px;
+        }
+        
+        #subbox5 {
+            width: 250px;
+            height: 250px;
+            background-color: darkslateblue;
+        }
+        
+        #subbox5:hover {
+            transform-origin: right;
+            transform: perspective(800px) scale3d(1, 1, -1) rotatey(30deg);
+            transition: .8s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body cz-shortcut-listen="true">
+
+        <div>
+            <div id="box1">
+                <div id="subbox1">
+                    <h2>Method = rotateX & origin = center</h2>
+                </div>
+            </div>
+            <div id="box2">
+                <div id="subbox2">
+                    <h2>Method = rotateY & origin = center</h2>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="subbox3">
+                    <h2>Method = rotateZ</h2>
+                </div>
+            </div>
+
+        </div>
+        <div id="box4">
+            <div id="subbox4">
+                <h2>Method =rotateX & translateZ</h2>
+            </div>
+        </div>
+
+        <div id="box5">
+            <div id="subbox5">
+                <h2>Method = scale3d & transition</h2>
+            </div>
+        </div>
+
+
+    </body>
+</body>
+
+</html>
